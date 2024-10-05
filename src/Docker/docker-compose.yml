@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  discord_webhooks_trigger:
+    image: armcastr/discord_webhooks_trigger:v3
+    restart: always 
+    env_file:
+      - .env
+
+    volumes:
+      - ./data:/app/data  
+
+

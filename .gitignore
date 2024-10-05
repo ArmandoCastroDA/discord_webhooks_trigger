@@ -1,5 +1,5 @@
 # Ignorar o arquivo de configuração
-/src/data/config.json
+/src/.env
 
 # Ignorar a pasta node_modules
 /node_modules/

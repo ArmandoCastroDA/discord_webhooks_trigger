@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const axios = require('axios');  // Usaremos axios para a requisição HTTP
-const { webhook_url } = require('../data/config.json');  // Importando a variável webhook_url
+require('dotenv').config();  // Carregando as variáveis de ambiente
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -9,7 +9,7 @@ module.exports = {
     async execute(interaction) {
         try {
             // Fazendo a requisição POST para o webhook
-            const response = await axios.post(webhook_url, {
+            const response = await axios.post(process.env.WEBHOOK_URL, {
                 content: 'Webhook test from Discord bot!'  // O conteúdo enviado ao webhook
             });
 

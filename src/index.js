@@ -1,6 +1,9 @@
 const fs = require('fs');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const { token } = require('./data/config.json');
+require('dotenv').config();  // Carregando as variáveis de ambiente
+
+// Acessando a variável de ambiente do token
+const token = process.env.TOKEN;
 
 // Atualizando as intenções para a nova forma
 const client = new Client({
@@ -42,6 +45,6 @@ try {
     client.login(token);
 } catch (err) {
     console.error(
-        "Failed to login to Discord. This is usually because of an invalid TOKEN. Please double check that you have the correct token in 'data/config.json'."
+        "Failed to login to Discord. This is usually because of an invalid TOKEN. Please double check that you have the correct token in your .env file."
     );
 }
