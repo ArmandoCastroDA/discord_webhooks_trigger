@@ -1,0 +1,21 @@
+{
+    "name": "discord_webhooks_trigger",
+    "description": "Send events for webhooks",
+    "author": {
+        "name": "Armando Castro",
+        "url": "https://github.com/Moros0741/"
+    },
+    "requirements": {
+        "NodeJS": ">=16.8.0",
+        "npm": ">=7.21.0"
+    },
+    "dependencies": {
+        "@discordjs/rest": ">=0.1.0-canary.0",
+        "axios": "^1.7.7",
+        "discord-api-types": ">=0.24.0",
+        "discord.js": ">=13.2.0",
+        "fs": "^0.0.1-security",
+        "mongoose": ">=6.0.11"
+    },
+    "run": "npm install mongoose discord.js discord-api-types @discordjs/rest"
+}

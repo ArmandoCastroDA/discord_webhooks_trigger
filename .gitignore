@@ -1,0 +1,8 @@
+# Ignorar o arquivo de configuração
+/src/data/config.json
+
+# Ignorar a pasta node_modules
+/node_modules/
+
+# Ignorar o arquivo de bloqueio do npm
+/package-lock.json
